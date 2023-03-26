@@ -1,10 +1,15 @@
 <script setup lang="ts">
 import ShopProductList from './ShopProductList.vue'
+
+defineProps<{
+  products: ProductInterface[]
+}>()
+
 </script>
 
 <template>
   <div>
-    <ShopProductList />
+    <ShopProductList :products="products" />
   </div>
 </template>
 
